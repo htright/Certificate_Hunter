@@ -8,7 +8,7 @@ const state = {
   page: null,
   pdfOverride: {},
   zoom: 100,
-  sidebarFolded: true
+  sidebarFolded: false
 };
 
 const app = document.querySelector("#app");
@@ -180,7 +180,7 @@ function render() {
     class="blogLink"
   >
     https://blog.naver.com/adp_jht
-  </a>
+  </a>  / 문의: adp_jht@naver.com
 </p>
       </div>
       <div class="controls">
