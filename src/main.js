@@ -8,7 +8,7 @@ const state = {
   page: null,
   pdfOverride: {},
   zoom: 100,
-  sidebarFolded: false
+  sidebarFolded: true
 };
 
 const app = document.querySelector("#app");
@@ -169,9 +169,19 @@ function render() {
   app.innerHTML = `
     <header class="topbar">
       <div>
-        <div class="kicker">기업회계 1급</div>
-        <h1>PDF 원문 · 단계별 풀이 학습실</h1>
-        <p>왼쪽은 PDF 원문 그대로, 오른쪽은 실전 풀이 순서</p>
+        <div class="kicker">Certificate_Hunter</div>
+        <h1>기업회계 1급</h1>
+<p>
+  제작자 블로그:
+  <a
+    href="https://blog.naver.com/adp_jht"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="blogLink"
+  >
+    https://blog.naver.com/adp_jht
+  </a>
+</p>
       </div>
       <div class="controls">
         <label>회차
@@ -229,7 +239,16 @@ function render() {
             ${selected.pages.map(p => `<button class="${state.page===p?'active':''}" data-page="${p}">p.${p}</button>`).join("")}
           </div>
         </div>
-        <iframe class="pdfFrame" src="${pdfSrc(exam, state.page)}" title="PDF 원문"></iframe>
+ <div class="pdfFrameWrap">
+  <iframe class="pdfFrame" src="${pdfSrc(exam, state.page)}" title="PDF 원문"></iframe>
+</div>
+
+<div class="pdfSource">
+  <strong>출처</strong>
+  <span>
+    한국세무사회 국가공인 전산세무회계 자격시험 기업회계 1급 확정답안 PDF 원문을 학습 목적으로 표시했습니다.
+  </span>
+</div><iframe class="pdfFrame" src="${pdfSrc(exam, state.page)}" title="PDF 원문"></iframe>
       </section>
 
       <section class="solution">
