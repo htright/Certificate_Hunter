@@ -2,7 +2,7 @@ export const EXAMS = [
   {
     "id": "96",
     "label": "제96회",
-    "pdfUrl": "/pdfs/exam-96.pdf",
+    "pdfUrl": "pdfs/exam-96.pdf",
     "questions": [
       {
         "id": "96-fin-1",
