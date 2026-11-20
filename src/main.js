@@ -253,7 +253,7 @@ function render() {
         <div class="kicker">Certificate_Hunter</div>
         <h1>기업회계 1급</h1>
         <p>
-           문의: adp_jht@naver.com
+           문의: contact@htrightlab.com
         </p>
       </div>
 
